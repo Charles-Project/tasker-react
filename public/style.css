@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette|Roboto&display=swap');
+
+/* general styles start*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Roboto',
+        sans-serif;
+}
+
+/* flex */
+.d-flex {
+    display: flex;
+}
+
+.d-flex-center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.d-flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/* text xcal */
+.text-center {
+    text-align: center;
+}
+
+.text-courgette {
+    font-family: 'Courgette',
+        cursive;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+/* background color */
+.bg-tomatoes {
+    background-color: rgb(252, 78, 47);
+}
+
+.bg-teal {
+    background-color: teal;
+}
+
+
+
+
+/* general styles end */
+
+
+/* app styles */
+.app-wrapper {
+    min-height: 100vh;
+    background-color: rgb(255, 254, 254);
+    width: 100%;
+
+}
+
+.todo-container {
+    min-height: 100vh;
+    padding-top: 1.5rem
+}
+
+.todo-container h3 {
+    margin-bottom: 1.8rem;
+    font-size: 26px;
+}
+
+.todo-wrapper {
+    padding: 1.2rem;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+    max-width: 400px;
+    width: 90%;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+}
+
+.btn-circle {
+    border: none;
+    width: 32px;
+    height: 32px;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+}
+
+.btn-circle:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.4);
+    background-color: white;
+    color: teal;
+}
+
+.btn-circle:focus {
+    transform: translateY(-1px);
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.4);
+    outline: none;
+
+}
+
+.task-input {
+    flex-grow: 1;
+    margin-right: 15px;
+    padding: 1px 5px !important;
+    text-transform: capitalize;
+    font-size: 13px !important;
+    height: 30px;
+}
+
+.task-input:focus {
+    outline: none;
+}
+
+.todo-output-wrapper {
+    margin-top: 0.3rem;
+    padding-top: 2.5rem;
+
+}
+
+.todo-title {
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.task {
+    background-color: white;
+    box-shadow: 1px 0 2px 2px rgba(0, 0, 0, 0.4);
+    padding: 8px 10px 8px 10px;
+    border-left: 5px solid teal;
+    border-radius: 7px;
+    font-size: 13px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.task-note {
+    flex-grow: 1;
+    margin-right: 8px;
+}
+
+.edit {
+    color: teal;
+    margin-right: 7px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.thrash {
+    color: tomato;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.task i:hover {
+    transform: scale(1.2);
+}
+
+.btn-teal {
+    background-color: #26a69a;
+    color: white;
+    margin-top: 1.5rem;
+    padding: 7px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    font-size: 11px;
+    transition: all 0.3s linear;
+}
+
+.btn-teal:hover,
+.btn-teal:focus {
+    outline: none;
+    border: 1px solid teal;
+    background-color: transparent;
+    color: teal;
+    transform: scale(1.03);
+}
+
+.btn-teal:focus {
+    transform: scale(0.98);
+}
