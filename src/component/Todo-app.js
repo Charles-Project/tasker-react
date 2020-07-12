@@ -19,7 +19,7 @@ export class Todo extends Component {
 
     let items = {
       id: this.state.id,
-      title: this.state.newTodo,
+      title: this.state.newTodo.trim(),
     };
     let updated = [items, ...this.state.todoItems];
 
@@ -32,7 +32,7 @@ export class Todo extends Component {
 
   changeHandler = (e) => {
     this.setState({
-      newTodo: e.target.value.trim(),
+      newTodo: e.target.value,
     });
   };
 
