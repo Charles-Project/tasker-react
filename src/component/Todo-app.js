@@ -8,54 +8,54 @@ export class Todo extends Component {
     this.state = {
       newTodo: "",
       todoItems: [],
-      id: uuidv4()
+      id: uuidv4(),
     };
   }
 
-  addtodo = e => {
+  addtodo = (e) => {
     if (this.state.newTodo === "") {
       return null;
     }
 
     let items = {
       id: this.state.id,
-      title: this.state.newTodo
+      title: this.state.newTodo,
     };
     let updated = [items, ...this.state.todoItems];
 
     this.setState({
       todoItems: updated,
       id: uuidv4(),
-      newTodo: ""
+      newTodo: "",
     });
   };
 
-  changeHandler = e => {
+  changeHandler = (e) => {
     this.setState({
-      newTodo: e.target.value.trim()
+      newTodo: e.target.value.trim(),
     });
   };
 
-  deleteHandler = item => {
-    let filterdItems = this.state.todoItems.filter(x => x.id !== item);
+  deleteHandler = (item) => {
+    let filterdItems = this.state.todoItems.filter((x) => x.id !== item);
     this.setState({
-      todoItems: filterdItems
+      todoItems: filterdItems,
     });
   };
 
-  editHandler = item => {
-    let filterItem = this.state.todoItems.filter(x => x.id === item);
-    let filterdItems = this.state.todoItems.filter(x => x.id !== item);
+  editHandler = (item) => {
+    let filterItem = this.state.todoItems.filter((x) => x.id === item);
+    let filterdItems = this.state.todoItems.filter((x) => x.id !== item);
     this.setState({
       todoItems: filterdItems,
       newTodo: filterItem[0].title,
-      id: filterItem[0].id
+      id: filterItem[0].id,
     });
   };
 
   clearHandler = () => {
     this.setState({
-      todoItems: []
+      todoItems: [],
     });
   };
 
@@ -63,7 +63,7 @@ export class Todo extends Component {
     return (
       <div className="app-wrapper">
         <div className="todo-container d-flex-column">
-          <h3 className="text-courgette text-center">Tasker App</h3>
+          <h3 className="text-courgette text-center">Activity App</h3>
           <div className="todo-wrapper">
             <div className="todo-input-wrapper d-flex-between">
               <input
@@ -82,7 +82,7 @@ export class Todo extends Component {
                 Activities
               </h4>
               {/* for loop item */}
-              {this.state.todoItems.map(item => {
+              {this.state.todoItems.map((item) => {
                 return (
                   <div className="task d-flex" key={item.id}>
                     <div className="task-note">{item.title} </div>
